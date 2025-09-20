@@ -1,0 +1,51 @@
+# ================================
+
+# Arquivos comuns de Java
+
+# ================================
+
+*.class
+
+*.jar
+
+*.war
+
+*.ear
+
+*.log
+ # ================================ astas de build/output
+
+# ================================
+
+bin/
+
+build/
+
+target/
+
+out/
+ # ================================ se / Spring Tool Suite (STS)
+
+# ================================
+
+.classpath
+
+.project
+
+.settings/
+
+.springBeans
+
+.factorypath
+
+.metadata/
+ 
+# ================================ r
+
+out/
+ 
+# ================================quivos de sistema (Windows / macOS / 
+Linux)e
+
+*.swo
+ 
