@@ -37,7 +37,6 @@ public class Menu {
 		c1.depositar(5000);
 		System.out.println("O Saldo da conta é: " + c1.getSaldo());
 
-
 		while (true) {
 
 			System.out.println(Cores.TEXT_BLUE_BOLD + Cores.ANSI_BLACK_BACKGROUND

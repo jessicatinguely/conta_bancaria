@@ -78,9 +78,6 @@ public class Conta {
 		
 	}
 	
-	
-	
-
 	public void visualizar() {
 		
 		String tipo = "";
