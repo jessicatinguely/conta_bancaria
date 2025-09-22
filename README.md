@@ -179,4 +179,4 @@ Este repositório é parte de um projeto educacional, mas contribuições são s
 <br />
 
 Desenvolvido por [**Jessica Tinguely⁄**](https://github.com/jessicatinguely)
-Para dúvidas, sugestões ou colaborações, entre em contato via GitHub ou abra uma issue.
+Para dúvidas, sugestões ou colaborações, entre em contato via GitHub ou abra uma issue!
