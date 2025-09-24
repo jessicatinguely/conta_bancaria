@@ -3,6 +3,7 @@ package conta_bancaria;
 import java.util.Scanner;
 
 import conta_bancaria.model.Conta;
+import conta_bancaria.model.ContaCorrente;
 import conta_bancaria.util.Cores;
 
 public class Menu {
@@ -17,10 +18,13 @@ public class Menu {
 		Conta c1 = new Conta(1, 123, 1, "Cintia Dourado", 500000.00f);
 		
 		Conta c2 = new Conta(2, 123, 2, "Priscila Lins", 500000.00f);
+		
+		Conta c3 = new Conta();
+		
 
 		System.out.println("O Saldo da conta é: " + c1.getSaldo());
 		
-		c1.setSaldo(600000.00f);
+		c1.setSaldo(60_0000.00f);
 		
 		System.out.println("O Saldo da conta é: " + c1.getSaldo());
 		
@@ -28,14 +32,32 @@ public class Menu {
 		
 		c2.visualizar();
 		
-		System.out.println(c1.sacar(1000));
+		System.out.println(c1.sacar(1_000));
 		System.out.println("O Saldo da conta é: " + c1.getSaldo());
 		
-		System.out.println(c2.sacar(1000000));
+		System.out.println(c2.sacar(1_000_000));
 		System.out.println("O Saldo da conta é: " + c2.getSaldo());
 		
 		c1.depositar(5000);
 		System.out.println("O Saldo da conta é: " + c1.getSaldo());
+		
+		
+		ContaCorrente cc1= new ContaCorrente(3, 456, 1, "Thuany Silva", 1_000_000.00f, 100_000.00f);
+		
+		
+		// Sacar Conta Corrente
+		cc1.visualizar();
+		
+		System.out.println(cc1.sacar(2_000_000.00f));
+		cc1.visualizar();
+		
+		System.out.println(cc1.sacar(2_000.00f));
+		cc1.visualizar();
+		
+		// Depositar Conta Corrente
+		cc1.depositar(5_000.00f);
+		cc1.visualizar();
+		
 
 		while (true) {
 

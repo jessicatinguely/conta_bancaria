@@ -19,8 +19,11 @@ public class Conta {
 		this.saldo = saldo;
 	}
 
+	public Conta() {} //Sobrecarga de metodo sempre na Classe
+	
 	// Métodos Get-pega o valor e Set-altera o valor (Para criarmos esses objetos de outras classes)
 
+		
 	public int getNumero() {
 		return numero;
 	}
