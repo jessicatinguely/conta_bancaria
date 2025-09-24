@@ -1,16 +1,21 @@
 package conta_bancaria.model;
 
+//Classe: Conta
+// Classe "mãe" (superclasse) das contas do sistema
+// Representa uma conta genérica, com atributos e comportament
+
 public class Conta {
-	
-	// Atributo da Classe
-	
+
+	// Atributos (variáveis de instância)
+	// Características que toda conta possui
 	private int numero;
 	private int agencia;
 	private int tipo;
 	private String titular;
 	private float saldo;
-	
+
 	// Método Construtor (STS gera automaticamente)
+	// Recebe todos os atributos e cria uma conta já inicializada
 	public Conta(int numero, int agencia, int tipo, String titular, float saldo) {
 		this.numero = numero;
 		this.agencia = agencia;
@@ -19,11 +24,13 @@ public class Conta {
 		this.saldo = saldo;
 	}
 
-	public Conta() {} //Sobrecarga de metodo sempre na Classe
-	
-	// Métodos Get-pega o valor e Set-altera o valor (Para criarmos esses objetos de outras classes)
+	// Construtor vazio (sobrecarga) / sempre na Classe
+	// Permite criar a conta sem passar valores no início
+	public Conta() {
+	}
 
-		
+	/// Métodos de acesso (getters e setters) / automático STS
+	// Servem para ler e alterar os valores dos atributos de forma controlada)
 	public int getNumero() {
 		return numero;
 	}
@@ -63,35 +70,42 @@ public class Conta {
 	public void setSaldo(float saldo) {
 		this.saldo = saldo;
 	}
-	
-	
+
+	// Método: sacar
+	// Tenta retirar um valor do saldo
+	// Retorna true se conseguiu, false se não havia saldo suficiente
 	public boolean sacar(float valor) {
-	
-		if(this.saldo<valor) {
+
+		if (this.saldo < valor) {
 			System.out.println("\nSaldo Insuficiente!");
 			return false;
 		}
 		this.saldo = this.saldo - valor;
-		
+
 		return true;
 	}
-	
-	public void depositar (float valor) {
+
+	// Método: depositar
+	// Aumenta o saldo com o valor informado
+	public void depositar(float valor) {
 		this.saldo = this.saldo + valor;
-		
+
 	}
-	
+
+	// Método: visualizar
+	// Mostra os dados completos da conta no console
 	public void visualizar() {
-		
+
 		String tipo = "";
 		
-		switch(this.tipo) {
+		// Define o tipo da conta com base no código 
+		switch (this.tipo) {
 		case 1 -> tipo = "Conta Corrente";
 		case 2 -> tipo = "Conta Poupança";
 		default -> tipo = "Desconhecido";
-		
+
 		}
-		
+
 		System.out.println("\n══════════════════════════════");
 		System.out.println("Dados da Conta");
 		System.out.println("══════════════════════════════");
@@ -100,6 +114,6 @@ public class Conta {
 		System.out.printf("Tipo da conta: %s%n", tipo);
 		System.out.printf("Titular da conta: %s%n", this.titular);
 		System.out.printf("Saldo da conta: %.2f%n", this.saldo);
-		
+
 	}
 }
