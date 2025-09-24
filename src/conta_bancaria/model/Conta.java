@@ -4,7 +4,7 @@ package conta_bancaria.model;
 // Classe "mãe" (superclasse) das contas do sistema
 // Representa uma conta genérica, com atributos e comportament
 
-public class Conta {
+public abstract class Conta {
 
 	// Atributos (variáveis de instância)
 	// Características que toda conta possui

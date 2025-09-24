@@ -2,7 +2,7 @@ package conta_bancaria;
 
 import java.util.Scanner;
 
-import conta_bancaria.model.Conta;
+
 import conta_bancaria.model.ContaCorrente;
 import conta_bancaria.model.ContaPoupanca;
 import conta_bancaria.util.Cores;
@@ -14,7 +14,7 @@ public class Menu {
 
 		int opcao;
 
-		// Instanciar Objetos da Classe Conta
+		/* Instanciar Objetos da Classe Conta
 
 		Conta c1 = new Conta(1, 123, 1, "Cintia Dourado", 500000.00f);
 
@@ -22,7 +22,7 @@ public class Menu {
 
 		Conta c3 = new Conta();
 
-		System.out.println("O Saldo da conta é: " + c1.getSaldo());
+		//System.out.println("O Saldo da conta é: " + c1.getSaldo());
 
 		c1.setSaldo(60_0000.00f);
 
@@ -41,38 +41,42 @@ public class Menu {
 		System.out.println("O Saldo da conta é: " + c2.getSaldo());
 
 		c1.depositar(5000);
-		System.out.println("O Saldo da conta é: " + c1.getSaldo());
+		System.out.println("O Saldo da conta é: " + c1.getSaldo());*/
 
-		// Demonstração: ContaCorrente com limite + operações sobrescritas
+		// Demonstração: ContaCorrente com limite + operações sobrescritas 
+		System.out.println("\n\nInstanciar Objeto da Classe ContaCorrente");
 		ContaCorrente cc1 = new ContaCorrente(3, 456, 1, "Thuany Silva", 1_000_000.00f, 100_000.00f);
-
-		// Saques e depósitos na ContaCorrente (considera limite)
 		cc1.visualizar();
 
+		// Sacar da ContaCorrente(considera limite)
 		System.out.println(cc1.sacar(2_000_000.00f));
-		cc1.visualizar();
+		System.out.println("O Saldo da conta é: R$ " + cc1.getSaldo());
 
 		System.out.println(cc1.sacar(2_000.00f));
-		cc1.visualizar();
+		System.out.println("O Saldo da conta é: R$ " + cc1.getSaldo());
 
-		
+		// Depositar ContaCorrente
+		System.out.println("Depositar R$ 5.000.00");
 		cc1.depositar(5_000.00f);
-		cc1.visualizar();
+		System.out.println("O Saldo da conta é: R$ " + cc1.getSaldo());
 
 		// Demonstração: Conta Poupança 
-		ContaPoupanca cp1 = new ContaPoupanca(4, 456, 1, "Rafael Cortez", 2_000_000.00f, 24);
+		System.out.println("\n\nInstanciar Objeto da Classe ContaPoupança");
+		ContaPoupanca cp1 = new ContaPoupanca(4, 456, 2, "Rafael Cortez", 2_000_000.00f, 24);
 
-		// Saques e depósitos na Conta Poupança
 		cp1.visualizar();
 
-		System.out.println(cp1.sacar(200_000.00f));
-		cp1.visualizar();
+		// Sacar na Conta Poupança
+		System.out.println("Sacar 200 mil reais" + cp1.sacar(200_000.00f));
+		System.out.println("O Saldo da conta é: R$ " + cp1.getSaldo());
 
-		System.out.println(cp1.sacar(20_000.00f));
-		cp1.visualizar();
+		System.out.println("Sacar 20 mil reais" + cp1.sacar(20_000.00f));
+		System.out.println("O Saldo da conta é: R$ " + cp1.getSaldo());
 
+		// Depositar ContaPopupanca
+		System.out.println("Depositar R$ 5.000.00");
 		cp1.depositar(5_000.00f);
-		cp1.visualizar();
+		System.out.println("O Saldo da conta é: R$ " + cp1.getSaldo());
 
 		// Laço principal do menu até "Sair"
 		while (true) {
