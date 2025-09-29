@@ -44,7 +44,10 @@ public class Menu {
 			System.out.println(Cores.TEXT_WHITE_BOLD + Cores.ANSI_BLACK_BACKGROUND
 					+ "  [8] Transferir valores entre Contas                " + Cores.TEXT_RESET);
 			System.out.println(Cores.TEXT_WHITE_BOLD + Cores.ANSI_BLACK_BACKGROUND
+					+ "  [9] Procurar Titular da Conta             " + Cores.TEXT_RESET);
+			System.out.println(Cores.TEXT_WHITE_BOLD + Cores.ANSI_BLACK_BACKGROUND
 					+ "  [0] Sair                                           " + Cores.TEXT_YELLOW_BOLD);
+		
 			System.out.println(Cores.TEXT_BLUE_BOLD + Cores.ANSI_BLACK_BACKGROUND
 					+ "                                                     " + Cores.TEXT_RESET);
 			System.out.println(Cores.TEXT_BLUE_BOLD + Cores.ANSI_BLACK_BACKGROUND
@@ -93,25 +96,30 @@ public class Menu {
 				keyPress();
 				break;
 			case 5:
-				System.out.println(Cores.TEXT_WHITE + "Apagar a Conta\n\n");
-				deletarConta();
 				keyPress();
 				break;
 			case 6:
 				System.out.println(Cores.TEXT_WHITE + "Saque\n\n");
-				// TODO: Implementar operação de saque via menu
+				sacar();
 				keyPress();
 				break;
 			case 7:
 				System.out.println(Cores.TEXT_WHITE + "Depósito\n\n");
-				// TODO: Implementar operação de depósito via menu
+				depositar();
 				keyPress();
-				break;
+					System.out.println(Cores.TEXT_WHITE + "Apagar a Conta\n\n");
+				deletarConta();
+			break;
 			case 8:
 				System.out.println(Cores.TEXT_WHITE + "Transferência entre Contas\n\n");
-				// TODO: Implementar transferência entre contas
+				transferir();
 				keyPress();
 				break;
+			case 9:
+				System.out.println(Cores.TEXT_WHITE + "Procurar pelo Titular da conta\n\n");
+				listarPorTitular();
+				keyPress();
+				break;		
 			default:
 				System.out.println(Cores.TEXT_RED_BOLD + "\nOpção Inválida!\n" + Cores.TEXT_RESET);
 				keyPress();
@@ -285,4 +293,54 @@ public class Menu {
 
 		}
 	}
+	private static void sacar() {
+		
+		System.out.print("Digite o número da conta: ");
+		int numero = leia.nextInt();
+		leia.nextLine();
+		
+		System.out.print("Digite o valor do saque: ");
+		float valor = leia.nextFloat();
+		leia.nextLine();
+		
+		contaController.sacar(numero, valor);
+	}
+	private static void depositar() {
+		
+		System.out.print("Digite o número da conta: ");
+		int numero = leia.nextInt();
+		leia.nextLine();
+		
+		System.out.print("Digite o valor do deposito: ");
+		float valor = leia.nextFloat();
+		leia.nextLine();
+		
+		contaController.depositar(numero, valor);
+	}
+	
+private static void transferir() {
+		
+		System.out.print("Digite o número da conta de Origem: ");
+		int numeroOrigem = leia.nextInt();
+		leia.nextLine();
+		
+		System.out.print("Digite o número da conta de Destino: ");
+		int numeroDestino = leia.nextInt();
+		leia.nextLine();
+		
+		System.out.print("Digite o valor da transferencia: ");
+		float valor = leia.nextFloat();
+		leia.nextLine();
+		
+		contaController.transferir(numeroOrigem, numeroDestino, valor);
+	}
+
+private static void listarPorTitular() {
+	System.out.println("Digite o nome do titular da conta: ");
+	String titular = leia.nextLine();
+	
+	contaController.listarPorTitular(titular);
+	
+	
+}
 }
