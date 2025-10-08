@@ -1,5 +1,5 @@
 
-# Projeto Conta Bancária - Java
+# 💰 Projeto Conta Bancária – Java  
 
 <br />
 
@@ -21,7 +21,7 @@
 
 <br />
 
-## 1. Descrição
+## 📋 1. Descrição  
 
 <br />
 
@@ -43,7 +43,7 @@ Além de servir como um simulador funcional, o projeto oferece uma base prática
 
 <br />
 
-## 2. Funcionalidades do Projeto
+## ⚙️ 2. Funcionalidades do Projeto  
 
 <br />
 
@@ -59,7 +59,7 @@ Além de servir como um simulador funcional, o projeto oferece uma base prática
 
 <br />
 
-## 3. Diagrama de Classes
+## 🧩 3. Diagrama de Classes  
 
 <br />
 
@@ -110,7 +110,7 @@ ContaPoupanca --> Conta
 
 <br />
 
-## 4. Tela Inicial do Sistema - Menu
+## 🖥️ 4. Tela Inicial do Sistema – Menu  
 
 <br />
 
@@ -120,7 +120,7 @@ ContaPoupanca --> Conta
 
 <br />
 
-## 5. Requisitos
+## 🧰 5. Requisitos  
 
 <br />
 
@@ -131,7 +131,7 @@ Para executar os códigos localmente, você precisará de:
 
 <br />
 
-## 6. Como Executar o projeto no Eclipse/STS
+## 🚀 6. Como Executar o Projeto no Eclipse/STS  
 
 <br />
 
@@ -162,7 +162,7 @@ git clone https://github.com/jessicatinguely/conta_bancaria.git
 
 <br />
 
-## 7. Contribuição
+## 🤝 7. Contribuição  
 
 <br />
 
@@ -174,9 +174,14 @@ Este repositório é parte de um projeto educacional, mas contribuições são s
 
 <br />
 
-##  8. Contato
+## 📞 8. Contato  
 
-<br />
+Desenvolvido por **Jessica Ghirardelli Tinguely**  
+📫 [GitHub](https://github.com/jessicatinguely)  
+💼 [LinkedIn](https://linkedin.com/in/jessicatinguely)  
 
-Desenvolvido por [**Jessica Tinguely⁄**](https://github.com/jessicatinguely)
-Para dúvidas, sugestões ou colaborações, entre em contato via GitHub ou abra uma issue!
+💬 *Para dúvidas, sugestões ou colaborações, entre em contato ou abra uma issue!*
+
+---
+
+⭐ *Se este projeto te ajudou, considere deixar uma estrela no repositório!* 🌟
